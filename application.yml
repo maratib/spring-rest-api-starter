@@ -1,0 +1,46 @@
+logging:
+  level:
+    org:
+      springframework:
+        web: warn
+      hibernate:
+        nodeValue: warn
+        SQL: ERROR
+      apache:
+        http:
+          client: warn
+    root: warn
+  pattern:
+    console: "%d{dd-MM HH:mm} - %-5level - %logger{1} - %msg%n"
+
+server:
+  port: "8081"
+
+spring:
+  profiles:
+    active: "dev"
+  main:
+    banner-mode: "off"
+
+---
+spring:
+  profiles: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    password: temp
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: temp
+    url: jdbc:mysql://127.0.0.1:3306/spring
+---
+spring:
+  profiles: prod
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    password: temp
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: temp
+    url: jdbc:mysql://127.0.0.1:3306/spring

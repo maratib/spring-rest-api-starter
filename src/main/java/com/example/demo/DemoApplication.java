@@ -21,12 +21,12 @@ public class DemoApplication {
 
 	@PostConstruct()
 	public void started() throws IOException {
-		// System.out.println("Application started at port : " + serverPort);
+		System.out.println("Application started at port : " + serverPort);
 	}
 
 	@PreDestroy
 	public void onExit() {
-		// System.out.println("Exiting app...");
+		System.out.println("Exiting app...");
 	}
 
 }
