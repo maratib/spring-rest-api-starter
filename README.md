@@ -1,2 +1,2 @@
 # Spring REST API Starter
-With JUnit5, 
+With JUnit5, JPA,
